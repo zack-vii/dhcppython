@@ -227,8 +227,6 @@ class DHCPClient(object):
         lease = Lease(discover, offer, request, ack, lease_time, self.ack_server)
 
         if verbose:
-            print(f"Client terminated after {lease_time * 1000:.0f} ms")
-        else:
             print(
                 f"Lease succesful: {ack.yiaddr} -- {ack.chaddr} -- {lease_time * 1000:.0f} ms elapsed"
             )
